@@ -37,12 +37,15 @@ def main():
     fullText = get_book_text(book_path)
     
     num_words = get_num_words(fullText)
-    print(f"{num_words} words found in the document")
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{num_words} words found in the document\n")
     
     dict = count_letters(fullText)
     sorted_list = sort_list(dict)
     for key in sorted_list:
         print(f"The '{key['char']}' character was found {key['num']} times")
+    print("--- End report ---")
+
 
 if __name__ == "__main__":
     main()
